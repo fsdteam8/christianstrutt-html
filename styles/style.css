@@ -271,13 +271,13 @@ a {
   border-bottom: none;
 }
 
-.hero-top::before {
+/* .hero-top::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(12, 0, 0, 0.88);
   z-index: 1;
-}
+} */
 
 .hero-top-content {
   position: relative;
