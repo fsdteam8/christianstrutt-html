@@ -289,7 +289,7 @@ const template = (data) => `<!DOCTYPE html>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
@@ -298,11 +298,11 @@ const template = (data) => `<!DOCTYPE html>
     <header class="header">
         <div class="header-inner">
             <div class="logo">
-                <a href="index.html"><img src="images/Pitshop-Pro-logo.jpg" alt="PitStop Pro MK"></a>
+                <a href="../index.html"><img src="../images/Pitshop-Pro-logo.jpg" alt="PitStop Pro MK"></a>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="../index.html">HOME</a></li>
                     <li class="dropdown">
                         <a href="#">VEHICLE REPAIR SERVICES <i class="fas fa-chevron-down"
                                 style="font-size:10px; margin-left:4px;"></i></a>
@@ -341,7 +341,7 @@ const template = (data) => `<!DOCTYPE html>
                 </div>
             </div>
             <div class="col img-col">
-                <img src="images/Car.png" alt="BMW Car" class="car-img" style="filter: drop-shadow(0 0 40px rgba(0,0,0,0.8));">
+                <img src="../images/Car.png" alt="BMW Car" class="car-img" style="filter: drop-shadow(0 0 40px rgba(0,0,0,0.8));">
             </div>
         </div>
     </section>
@@ -383,7 +383,7 @@ const template = (data) => `<!DOCTYPE html>
             <section class="section-padding section-reverse">
                 <div class="container row">
                     <div class="col img-col">
-                        <img src="images/Car.png" alt="BMW Car" class="car-img">
+                        <img src="../images/Car.png" alt="BMW Car" class="car-img">
                     </div>
                     <div class="col text-col">
                         <h2>${data.bmwTitle}</h2>
@@ -498,6 +498,6 @@ const template = (data) => `<!DOCTYPE html>
 </html>`;
 
 services.forEach(service => {
-  fs.writeFileSync(`${service.slug}.html`, template(service));
-  console.log(`Generated ${service.slug}.html`);
+  fs.writeFileSync(`services/${service.slug}.html`, template(service));
+  console.log(`Generated services/${service.slug}.html`);
 });
